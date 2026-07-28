@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-
+const base = import.meta.env.BASE_URL;
 const nav = [
   { label: 'MUSIC', href: '#music' },
   { label: 'LIVE', href: '#live' },
@@ -40,12 +40,12 @@ const shows = [
       <section class="hero" aria-label="Riviera">
         <img
           class="hero-photo"
-          src="/images/riviera-hero.jpg"
+          src={`${base}images/riviera-hero.jpg`}
           alt="Riviera musician standing by the ocean with a guitar"
         />
 
         <div class="hero-ui">
-          <img class="logo" src="/images/riviera-logo.png" alt="Riviera" />
+          <img class="logo" src={`${base}images/riviera-logo.png`} alt="Riviera" />
 
           <nav class="main-nav" aria-label="Main navigation">
             {nav.map((item) => <a href={item.href}>{item.label}</a>)}
