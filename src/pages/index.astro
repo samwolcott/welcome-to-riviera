@@ -4,9 +4,8 @@ import '../styles/global.css';
 const base = import.meta.env.BASE_URL;
 
 const nav = [
-  { label: 'MUSIC', href: '#music' },
-  { label: 'LIVE', href: '#live' },
   { label: 'ABOUT', href: '#about' },
+  { label: 'LIVE', href: '#live' },
   { label: 'CONTACT', href: '#contact' },
 ];
 
@@ -50,47 +49,137 @@ const shows = [
             alt="Riviera"
           />
 
+          <!-- NAVIGATION -->
           <nav class="main-nav" aria-label="Main navigation">
             {nav.map((item) => (
               <a href={item.href}>{item.label}</a>
             ))}
           </nav>
 
+          <!-- SOCIAL LINKS -->
           <div class="socials" aria-label="Social links">
 
             <!-- Instagram -->
-            <a href="#" aria-label="Instagram" title="Instagram">
+            <a
+              href="https://www.instagram.com/welcome_to_riviera/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              title="Instagram"
+            >
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4.25" />
-                <circle class="fill" cx="17.5" cy="6.5" r="1.1" />
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.25"
+                />
+                <circle
+                  class="fill"
+                  cx="17.5"
+                  cy="6.5"
+                  r="1.1"
+                />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/profile.php?id=61591573870392"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              title="Facebook"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  class="fill"
+                  d="M13.7 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H17V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.4Z"
+                />
               </svg>
             </a>
 
             <!-- Spotify -->
-            <a href="#" aria-label="Spotify" title="Spotify">
+            <a
+              href="https://open.spotify.com/artist/3RgYvYI6gv3cj6H0NclscK?si=zxAncx5gTFOJ7bwxiGV72A"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Spotify"
+              title="Spotify"
+            >
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="9.25" />
-                <path d="M7 9.2c3.6-1 7.7-.6 10.5.9M7.8 12.2c3-.8 6.4-.45 8.8.75M8.6 15.1c2.4-.6 5-.3 7 .7" />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9.25"
+                />
+                <path
+                  d="M7 9.2c3.6-1 7.7-.6 10.5.9
+                     M7.8 12.2c3-.8 6.4-.45 8.8.75
+                     M8.6 15.1c2.4-.6 5-.3 7 .7"
+                />
               </svg>
             </a>
 
             <!-- Apple Music -->
-            <a href="#" aria-label="Apple Music" title="Apple Music">
+            <a
+              href="#"
+              aria-label="Apple Music"
+              title="Apple Music"
+            >
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  class="fill"
-                  d="M16.8 12.6c0-2.6 2.1-3.9 2.2-4-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.1 1-3.9 1s-2-1-3.4-1c-1.8 0-3.5 1.1-4.4 2.7-1.9 3.3-.5 8.2 1.3 10.9.9 1.3 2 2.8 3.4 2.7 1.3-.1 1.9-.9 3.5-.9s2.1.9 3.5.8c1.5 0 2.4-1.3 3.3-2.6 1-1.5 1.5-3 1.5-3.1-.1 0-3.2-1.2-3.2-4.5ZM14.2 4.9c.7-.9 1.2-2.1 1.1-3.3-1.1 0-2.4.7-3.2 1.6-.7.8-1.3 2-1.1 3.2 1.2.1 2.5-.6 3.2-1.5Z"
+                <path d="M9 18V6.5L19 4v11" />
+                <ellipse
+                  cx="6.5"
+                  cy="18"
+                  rx="2.5"
+                  ry="2"
+                />
+                <ellipse
+                  cx="16.5"
+                  cy="15"
+                  rx="2.5"
+                  ry="2"
                 />
               </svg>
             </a>
 
             <!-- YouTube -->
-            <a href="#" aria-label="YouTube" title="YouTube">
+            <a
+              href="https://www.youtube.com/@welcometoriviera"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              title="YouTube"
+            >
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   class="fill"
                   d="M21.5 7.2a3 3 0 0 0-2.1-2.1C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.4.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.4.5 7.4.5s5.6 0 7.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.5-4.8ZM10 15.2V8.8l5.5 3.2-5.5 3.2Z"
+                />
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/@welcometoriviera"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              title="TikTok"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M15 4v10.5a5 5 0 1 1-4-4.9"
+                />
+                <path
+                  d="M15 4c.6 2.6 2.1 4.1 4.5 4.6"
                 />
               </svg>
             </a>
@@ -104,14 +193,35 @@ const shows = [
       </section>
 
 
-      <!-- MUSIC -->
-      <section id="music" class="content-section light">
-        <p class="eyebrow">LISTEN</p>
-        <h2>MUSIC</h2>
+      <!-- ABOUT -->
+      <section id="about" class="content-section sand">
+        <p class="eyebrow">THE STORY</p>
 
-        <p class="placeholder-copy">
-          Latest release artwork and streaming links go here.
-        </p>
+        <h2>ABOUT RIVIERA</h2>
+
+        <div class="about-copy">
+          <p>
+            Riviera is the musical and visual world of producer and filmmaker Michael Rabb.
+            Born from a desire to rediscover the joy of creating during a season of anxiety,
+            the project explores the art of easy living through music, cinematic storytelling,
+            and an imagined world that invites us to slow down and rediscover the richness of
+            everyday life.
+          </p>
+
+          <p>
+            Drawing from yacht rock, soul-pop, jazz harmony, and modern indie production,
+            Riviera creates music that invites listeners to slow down and rediscover the beauty
+            of everyday life. Built around the creative vision of Michael Rabb and shaped with
+            collaborators from around the world, Riviera is both a musical project and an
+            imagined world—a place where beauty, leisure, and emotional honesty still matter.
+          </p>
+
+          <p>
+            Every song feels like the soundtrack to a vacation you somehow remember but never
+            actually took. But Riviera isn’t about escaping life. It’s about rediscovering the
+            beauty of the one you’re already living.
+          </p>
+        </div>
       </section>
 
 
@@ -124,7 +234,6 @@ const shows = [
         </div>
 
         <div class="shows">
-
           {shows.map((show) => (
             <article class="show-row">
 
@@ -154,41 +263,9 @@ const shows = [
 
             </article>
           ))}
-
         </div>
+
       </section>
-
-
-      <!-- ABOUT -->
-<section id="about" class="content-section sand">
-  <p class="eyebrow">THE STORY</p>
-
-  <h2>ABOUT RIVIERA</h2>
-
-  <div class="about-copy">
-    <p>
-      Riviera is the musical and visual world of producer and filmmaker Michael Rabb.
-      Born from a desire to rediscover the joy of creating during a season of anxiety,
-      the project explores the art of easy living through music, cinematic storytelling,
-      and an imagined world that invites us to slow down and rediscover the richness of
-      everyday life.
-    </p>
-
-    <p>
-      Drawing from yacht rock, soul-pop, jazz harmony, and modern indie production,
-      Riviera creates music that invites listeners to slow down and rediscover the beauty
-      of everyday life. Built around the creative vision of Michael Rabb and shaped with
-      collaborators from around the world, Riviera is both a musical project and an
-      imagined world—a place where beauty, leisure, and emotional honesty still matter.
-    </p>
-
-    <p>
-      Every song feels like the soundtrack to a vacation you somehow remember but never
-      actually took. But Riviera isn’t about escaping life. It’s about rediscovering the
-      beauty of the one you’re already living.
-    </p>
-  </div>
-</section>
 
 
       <!-- CONTACT -->
