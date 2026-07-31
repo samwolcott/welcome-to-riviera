@@ -27,10 +27,9 @@ a {
   text-decoration: none;
 }
 
-
-/* =========================
+/* =====================================================
    HERO
-   ========================= */
+===================================================== */
 
 .hero {
   position: relative;
@@ -49,7 +48,7 @@ a {
   height: 100%;
   object-fit: cover;
 
-  /* Shift image DOWN */
+  /* Desktop crop */
   object-position: center 35%;
 }
 
@@ -60,77 +59,71 @@ a {
   pointer-events: none;
   background: linear-gradient(
     to bottom,
-    rgba(0, 35, 64, 0.06) 0%,
-    rgba(0, 35, 64, 0) 45%,
-    rgba(0, 0, 0, 0.04) 100%
+    rgba(0,35,64,.06),
+    rgba(0,35,64,0) 45%,
+    rgba(0,0,0,.04)
   );
 }
 
 .hero-ui {
   position: relative;
   z-index: 2;
-  width: min(66vw, 1040px);
+  width: min(66vw,1040px);
   margin: 0 auto;
-  padding-top: clamp(2.4rem, 6.3vh, 5rem);
+  padding-top: clamp(2.4rem,6vh,5rem);
   text-align: center;
 }
 
 .logo {
   display: block;
   width: 100%;
-  height: auto;
   max-height: 150px;
   object-fit: contain;
   margin: 0 auto;
 }
 
-
-/* =========================
-   NAVIGATION
-   ========================= */
+/* =====================================================
+   NAV
+===================================================== */
 
 .main-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: clamp(0.8rem, 1.4vw, 1.45rem);
-  margin-top: clamp(1.1rem, 2.8vh, 2.1rem);
+  gap: clamp(.8rem,1.4vw,1.45rem);
+  margin-top: clamp(1.1rem,2.8vh,2rem);
 }
 
 .main-nav a {
-  font-family: Anton, Impact, sans-serif;
-  font-size: clamp(0.82rem, 1.25vw, 1.2rem);
-  letter-spacing: 0.025em;
-  transition: opacity 0.2s ease;
+  font-family: Anton, sans-serif;
+  font-size: clamp(.82rem,1.2vw,1.2rem);
+  letter-spacing: .03em;
+  transition: opacity .2s;
 }
 
 .main-nav a:hover,
 .socials a:hover {
-  opacity: 0.65;
+  opacity: .65;
 }
 
-
-/* =========================
-   SOCIAL LINKS
-   ========================= */
+/* =====================================================
+   SOCIAL
+===================================================== */
 
 .socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.9rem;
-  margin-top: clamp(1.15rem, 2.7vh, 2rem);
+  gap: .9rem;
+  margin-top: clamp(1.1rem,2.7vh,2rem);
 }
 
 .socials a {
   width: 20px;
   height: 20px;
-  display: block;
-  transition: opacity 0.2s ease;
 }
 
 .socials svg {
-  display: block;
   width: 100%;
   height: 100%;
   fill: none;
@@ -140,79 +133,94 @@ a {
   stroke-linejoin: round;
 }
 
-.socials svg .fill {
+.socials .fill {
   fill: currentColor;
   stroke: none;
 }
 
+/* =====================================================
+   SCROLL
+===================================================== */
+
 .scroll-cue {
   position: absolute;
-  z-index: 2;
   bottom: 1.2rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.58rem;
-  letter-spacing: 0.22em;
-  opacity: 0.7;
+  z-index: 2;
+
+  font-size: .58rem;
+  letter-spacing: .22em;
+  opacity: .7;
 }
 
-
-/* =========================
-   GENERAL CONTENT SECTIONS
-   ========================= */
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 .content-section {
   min-height: 75svh;
-  padding: clamp(5rem, 10vw, 10rem) 8vw;
+  padding: clamp(5rem,10vw,10rem) 8vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.content-section.light {
+.light {
   background: var(--white);
 }
 
-.content-section.dark {
+.dark {
   background: var(--ink);
-  color: var(--white);
+  color: white;
 }
 
-.content-section.sand {
+.sand {
   background: var(--sand);
 }
 
 .eyebrow {
   margin: 0 0 1rem;
-  font-family: Anton, Impact, sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  font-family: Anton,sans-serif;
+  font-size: .8rem;
+  letter-spacing: .14em;
 }
 
 h2 {
   margin: 0;
-  font-size: clamp(4rem, 11vw, 10rem);
-  line-height: 0.9;
+  font-size: clamp(4rem,11vw,10rem);
   font-weight: 300;
-  letter-spacing: -0.06em;
+  line-height: .9;
+  letter-spacing: -.06em;
 }
 
-.placeholder-copy {
-  max-width: 36rem;
-  margin: 2rem 0 0;
-  font-size: clamp(1rem, 1.4vw, 1.25rem);
-  line-height: 1.65;
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-copy {
+  max-width: 760px;
+  margin-top: 2.5rem;
 }
 
+.about-copy p {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1rem,1.4vw,1.2rem);
+  line-height: 1.8;
+}
 
-/* =========================
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================================================
    LIVE
-   ========================= */
+===================================================== */
 
 .live-section {
   background: var(--ink);
-  color: var(--white);
-  padding: clamp(5rem, 10vw, 10rem) 7vw;
+  color: white;
+  padding: clamp(5rem,10vw,10rem) 7vw;
 }
 
 .live-heading {
@@ -220,8 +228,7 @@ h2 {
 }
 
 .shows {
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.65);
+  border-top: 1px solid rgba(255,255,255,.65);
 }
 
 .show-row {
@@ -229,154 +236,135 @@ h2 {
   grid-template-columns: 1.2fr 1fr auto;
   align-items: center;
   gap: 2rem;
+
   min-height: 110px;
+
   padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+
+  border-bottom: 1px solid rgba(255,255,255,.65);
 }
 
 .show-date {
   font-size: 1.35rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: .35rem;
 }
 
 .show-venue,
 .show-city {
-  font-size: 0.85rem;
+  font-size: .85rem;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .show-ticket a {
   display: inline-block;
   min-width: 130px;
-  padding: 0.7rem 1.5rem;
-  border: 1px solid var(--white);
+  padding: .7rem 1.5rem;
+
+  border: 1px solid white;
   border-radius: 3px;
+
   text-align: center;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+  font-size: .75rem;
+  letter-spacing: .1em;
+
+  transition: .2s;
 }
 
 .show-ticket a:hover {
-  background: var(--white);
+  background: white;
   color: var(--ink);
 }
 
-
-/* =========================
-   ABOUT
-   ========================= */
-
-#about .about-copy {
-  width: 100%;
-  max-width: 760px;
-  margin-top: 2.5rem;
-}
-
-#about .about-copy p {
-  margin: 0 0 1.5rem;
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
-  line-height: 1.7;
-}
-
-#about .about-copy p:last-child {
-  margin-bottom: 0;
-}
-
-
-/* =========================
+/* =====================================================
    CONTACT
-   ========================= */
+===================================================== */
 
 .email {
   margin-top: 2rem;
   align-self: flex-start;
   border-bottom: 1px solid currentColor;
-  padding-bottom: 0.25rem;
+  padding-bottom: .25rem;
 }
 
-
-/* =========================
+/* =====================================================
    MOBILE
-   ========================= */
+===================================================== */
 
-@media (max-width: 700px) {
-  .hero-photo {
-    object-position: 52% 35%;
-  }
-}
+@media (max-width:700px){
 
-  .hero-photo {
-    object-position: 52% center;
+  .hero{
+    min-height:680px;
   }
 
-  .hero-ui {
-    width: 88vw;
-    padding-top: 3rem;
+  .hero-photo{
+    object-position:52% 35%;
   }
 
-  .logo {
-    width: 100%;
+  .hero-ui{
+    width:88vw;
+    padding-top:3rem;
   }
 
-  .main-nav {
-    gap: 0.75rem 1rem;
-    margin-top: 1.35rem;
+  .main-nav{
+    gap:.75rem 1rem;
+    margin-top:1.35rem;
   }
 
-  .main-nav a {
-    font-size: 0.85rem;
+  .main-nav a{
+    font-size:.85rem;
   }
 
-  .socials {
-    margin-top: 1.25rem;
+  .socials{
+    margin-top:1.25rem;
   }
 
-  .content-section {
-    padding-inline: 1.4rem;
+  .content-section{
+    padding:5rem 1.4rem;
   }
 
-  #about .about-copy {
-    max-width: 100%;
-    margin-top: 2rem;
+  h2{
+    font-size:clamp(3.2rem,18vw,6rem);
   }
 
-  .live-section {
-    padding: 5rem 1.4rem;
+  .about-copy{
+    max-width:100%;
   }
 
-  .show-row {
-    grid-template-columns: 1fr auto;
-    gap: 1rem;
-    min-height: auto;
-    padding: 1.5rem 0;
+  .live-section{
+    padding:5rem 1.4rem;
   }
 
-  .show-city {
-    grid-column: 1;
-    margin-top: 0.25rem;
+  .show-row{
+    grid-template-columns:1fr auto;
+    gap:1rem;
+    min-height:auto;
+    padding:1.5rem 0;
   }
 
-  .show-ticket {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    align-self: center;
+  .show-city{
+    grid-column:1;
+    margin-top:.25rem;
   }
 
-  .show-ticket a {
-    min-width: auto;
-    padding: 0.65rem 1rem;
+  .show-ticket{
+    grid-column:2;
+    grid-row:1 / span 2;
+    align-self:center;
   }
 
-  .show-date {
-    font-size: 1.1rem;
+  .show-ticket a{
+    min-width:auto;
+    padding:.65rem 1rem;
+  }
+
+  .show-date{
+    font-size:1.1rem;
   }
 
   .show-city,
-  .show-venue {
-    font-size: 0.75rem;
-  
+  .show-venue{
+    font-size:.75rem;
+  }
+
 }
